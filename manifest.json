@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Retry Checks",
+  "version": "0.1.0",
+  "description": "Hides a failed PR check when a retry job for it has passed.",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["retryChecks.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
